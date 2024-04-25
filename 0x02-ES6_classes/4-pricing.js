@@ -23,7 +23,6 @@ export default class Pricing {
 
   set currency(currency) {
     if (currency instanceof Currency) {
-      console.log('cur set');
       this._currency = currency;
     } else {
       throw TypeError('Currency must be a currency');
