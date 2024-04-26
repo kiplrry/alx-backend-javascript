@@ -6,6 +6,6 @@ export default function guardrail(mathFunction) {
     q = [`${e.name}: ${e.message}`];
   }
 
-  q.push('\'Guardrail was processed\'');
+  q.push('Guardrail was processed');
   return q;
 }
