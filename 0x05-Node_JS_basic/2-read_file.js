@@ -6,12 +6,12 @@ function countStudents(path) {
     const data = fs.readFileSync(path, 'utf-8');
     const lines = data.toString().split('\n');
     lines.shift();
-    let number = 0
+    let number = 0;
     lines.forEach((line) => {
-      if(!line){
-        return
+      if (!line) {
+        return;
       }
-      number++
+      number += 1;
       const field = line.split(',').pop();
       const student = line.split(',').shift();
       if (!fields[field]) {
