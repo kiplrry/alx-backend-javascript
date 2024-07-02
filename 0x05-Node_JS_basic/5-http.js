@@ -53,6 +53,7 @@ const app = http.createServer(async (req, res) => {
     res.write('This is the list of our students\n');
     res.end(ans);
   }
+  res.end();
 });
 
 app.listen(port, hostname);
