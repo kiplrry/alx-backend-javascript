@@ -5,14 +5,15 @@ const hostname = '127.0.0.1';
 const port = 1245;
 const path = process.argv[2];
 
-function countStudents(path) {
+function countStudents(filePath) {
   return new Promise((resolve, reject) => {
     const fields = {};
     let number = 0;
     let ans = '';
-    fs.readFile(path, (err, data) => {
+    fs.readFile(filePath, (err, data) => {
       if (err) {
-        reject(Error('Cannot load the database'));
+        console.log(`eeeeee`)
+        reject(err);
         return;
       }
       const lines = data.toString().split('\n');
